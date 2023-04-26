@@ -30,3 +30,27 @@ El constructor copia es un tipo de constructor que recibe como parámetro un obj
             this.nombre=objPersona.nombre;
             this.edad=objPersona.edad;
         }
+        
+Y ahora por tanto en el método principal, podemos crear una persona y crear con este constructor copia una copia de ese mismo objeto.
+
+        public class Principal {
+            public static void main(String[] args) {
+
+                // Creamos tres variables que contendrán el dni
+                // el nombre y la edad de la persona
+                String valorDNI, valorNombre;
+                int valorEdad;
+
+                valorDNI="999777555N";
+                valorNombre="María";
+                valorEdad=22;
+
+                // Creamos un objeto de tipo persona.
+                // Entre los paréntesis del constructor
+                // se pasan estas variables.
+                Persona miPersona=new Persona(valorDNI,valorNombre,valorEdad);
+
+                // Creamos una copia del objeto miPersona.
+                Persona copiaPersona=new Persona(miPersona);
+            }
+        }
